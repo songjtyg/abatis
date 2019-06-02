@@ -34,7 +34,7 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
-import org.sjt.mybatis.annotation.SmartProvider;
+import org.sjt.mybatis.annotation.Smart;
 import org.apache.ibatis.annotations.Arg;
 import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.CacheNamespaceRef;
@@ -114,7 +114,7 @@ public class MapperAnnotationBuilder {
     sqlAnnotationTypes.add(Update.class);
     sqlAnnotationTypes.add(Delete.class);
 
-    sqlProviderAnnotationTypes.add(SmartProvider.class);
+    sqlProviderAnnotationTypes.add(Smart.class);
     sqlProviderAnnotationTypes.add(SelectProvider.class);
     sqlProviderAnnotationTypes.add(InsertProvider.class);
     sqlProviderAnnotationTypes.add(UpdateProvider.class);
@@ -495,7 +495,7 @@ public class MapperAnnotationBuilder {
         return SqlCommandType.UNKNOWN;
       }
 
-      if (type == SmartProvider.class) {
+      if (type == Smart.class) {
         type = Select.class;
       }else if (type == SelectProvider.class) {
         type = Select.class;

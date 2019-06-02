@@ -1,6 +1,6 @@
 package org.sjt.mybatis.demo.dao;
 
-import org.sjt.mybatis.annotation.SmartProvider;
+import org.sjt.mybatis.annotation.Smart;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.sjt.mybatis.demo.model.PoiPO;
@@ -42,7 +42,7 @@ public interface PoiMapper {
     //@InterceptAnnotation
     //@SelectProvider(type = PoiSqlProvider.class, method = "selectPoiBo")
     //@Select("select * from poi")
-    //@SmartProvider
-    @SmartProvider
+    //@Smart
+    @Smart
     List<PoiPO> listPoi(@Param("poiPOBo")PoiPO poiPOBo);
 }
